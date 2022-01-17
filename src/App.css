@@ -1,38 +1,124 @@
-.App {
-  text-align: center;
+ *{
+     padding: 0;
+     margin: 0;
+     box-sizing: border-box;
+     font-family: Verdana, Geneva, Tahoma, sans-serif
+ }
+ :root {
+    --background: hsl(0, 0%, 98%);
+    --lighter-gray: hsl(236, 33%, 96%);
+    --light-gray: hsl(233, 11%, 90%);
+    --dark-blue: hsl(236, 9%, 61%);
+    --darker-blue: hsl(235, 19%, 35%);
+    --hover-light-gray: hsl(235, 19%, 33%);
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+[data-theme='dark'] {
+    --background: hsl(235, 21%, 11%);
+    --lighter-gray: hsl(235, 24%, 19%);
+    --light-gray: hsl(234, 39%, 90%);
+    --hover-light-gray: hsl(236, 33%, 88%);
+    --dark-blue: hsl(237, 14%, 26%);
+    --darker-blue:hsl(233, 14%, 65%);
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.todo-app {
+    width: 100%;
+    height: 100%;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+.picture {
+    height: 40vh;
+    width: 100%;
 }
 
-.App-link {
-  color: #61dafb;
+.picture img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.background {
+    height: 60vh;
+    width: 100%;
+    background: var(--background);
 }
+
+.container {
+    position: absolute;
+    top: 15vh;
+    width: 70vh;
+    left: calc(50% - 35vh);
+}
+
+header {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items:center;
+    color: white;
+    font-weight: 500;
+    margin-bottom: 1rem;
+}
+
+.todo-input {
+    width: 100%;
+    border: none;
+    outline: none;
+    height: 5%;
+    padding: 20px;
+    border-radius: 5px;
+    background: var(--lighter-gray);
+    color: var(--darker-blue);
+}
+
+.todo-container {
+    width: 100%;
+
+}
+
+.todo-list {
+    width: 100%;
+    margin-top: 1.5rem;
+}
+
+li {
+    list-style-type: none;
+    flex-grow: 4;
+    margin-left: 5px;
+}
+
+.todo {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
+    background: var(--lighter-gray);
+    color: var(--darker-blue);
+    margin-bottom: 1px;
+    align-items: center;
+}
+
+.todo img {
+    width: 15px;
+    height: 15px;
+    margin: auto 0px;
+}
+
+.select {
+    background: var(--lighter-gray);
+    color: var(--darker-blue);
+    display:flex;
+    width: 100%;
+    justify-content: space-around;
+    font-size: 1rem;
+    align-items: center;
+    padding: 10px;
+    cursor: pointer;
+}
+
+.option:hover {
+    color:var(--hover-light-gray);
+    opacity: 0.6;
+}
+
